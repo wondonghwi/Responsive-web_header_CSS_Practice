@@ -1,0 +1,88 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3498db;
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+}
+
+.navbar__logo a:hover {
+    background-color: #f1c40f;
+}
+
+.navbar__logo i {
+    color: #f1c40f;
+}
+
+.navbar__menus {
+    display: flex;
+}
+
+.navbar__menus li {
+    padding: 8px 12px;
+}
+
+.navbar__menus li a:hover {
+    background-color: #f1c40f;
+    border-radius: 4px;
+}
+
+.navbar__icons {
+    display: flex;
+    color: #fff;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 8px 24px;
+        }
+        .navbar__menus {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .navbar__icons {
+            display: none;
+            justify-content: center;
+            width: 100%;
+        }
+        .navbar__toggleBtn {
+            display: block;
+        }
+        .navbar__menus.active,
+        .navbar__icons.active {
+            display: flex;
+        }
+}
